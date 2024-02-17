@@ -1,0 +1,226 @@
+/**GERAL**/
+body {
+    background-color: #000;
+}
+
+header {
+    position: relative;
+    padding: 25px;
+    background: linear-gradient(
+        180deg, 
+        rgba(0, 0, 0, 0.69) 0%, 
+        rgba(0, 0, 0, 0) 100%
+        ); /**gradiente**/
+
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: 2;
+}
+
+
+.btn-custom-round {
+    padding: 5px 9px !important;
+    margin-top: 0px;
+    position: relative;
+    left: -25px;
+    
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+
+.header-logo {
+    width: 150px;
+    
+}
+
+.btn-custom-white { 
+    background-color: #fff;
+    margin-left: 25px;
+    margin-top: -30px; /*sobe*/
+}
+
+.btn-custom-whitee { /*botao branco*/
+    background-color: #fff;
+    margin-left: 25px;
+}
+
+
+.btn-custom-translucent { /*botao transparente*/
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    margin-left: 5px;
+    margin-top: -30px;
+}
+
+.btn-custom-translucent:hover { /*mouse*/
+    color:#fff;
+    opacity: 0.8
+}
+
+.btn-custom-white:hover {
+    opacity: 0.8
+}
+
+
+/**HOME**/
+.menu_list {
+    list-style: none; /*tira a linha de baixo do texto*/
+    padding-left: 0;
+    padding-top: 7px;
+    position: relative;
+}
+
+.menu_list li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.menu_list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    height: 700px;
+    background-image: url(assets/capafilme.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+#hero::after { /**inclui um item dps q o hero termina**/
+    content: '';
+    width: 100%;
+    height: 350px;
+    display: block;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    position: absolute;
+    left: 0;
+    z-index: 2; /*hero ta com o zindex 1, os botoes estao com o zindex 3, entao este aqui ficara entre os dois*/
+    top: calc(700px - 350px)
+}
+
+#hero_infos {
+    padding: 0;
+    padding-top: 150px;
+    z-index: 3;
+    position: relative;
+}
+
+#hero_infos img.logo {
+    margin-bottom: 35px;
+    width: 450px;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+#hero_infos h1 {
+    margin-bottom: 10px; /**desce**/
+    margin-left: 25px;
+    margin-top: -10px;
+    font-size: 25px; /*tamanho fonte top3filmes*/
+}
+
+#hero_infos h1 img{
+    width: 35px;
+}
+
+
+#hero_infos p {
+    margin-left: 25px; /**direita**/
+}
+
+#main-content {
+    margin-top: 700px; /**passa p frente**/
+    margin-left: -70px;
+}
+
+.filme_lista {
+    overflow-x: scroll; /*faz a rolagem*/
+    list-style: none;
+    white-space: nowrap;
+    padding: 20px 0;
+    display: block;
+    border: 1px solid transparent;
+    overflow-y: hidden;
+}
+
+.filme_lista::-webkit-scrollbar { /*tira a barra de rolamento baixo*/
+    display: none;
+}
+
+.filme {
+    display: inline-block;
+    width: 250px;
+    margin-right: 10px;
+    margin-left: -5px;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow: auto;
+    border: 1px solid transparent;
+}
+
+.filme:hover {
+    cursor: pointer;
+    transform: scale(1.2); /*120%*/
+    z-index: 999; /*acima de tudo*/
+    transition: 0.5s;
+}
+
+.filme:hover .filme_info{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.filme:first-child {
+    margin-left: 110px;
+}
+
+.filme_info /*caixa filme curtir..*/ {
+    background-color: #0f0f0f;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    transform: scale(0);
+}
+
+.filme_info .col-12:first-child {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.filme_info .col-12 {
+    margin-top: 5px;
+}
+
+.filme_info p { /*t3ep5*/
+    color: #7e7b7b;
+    font-size: 12px;
+}
+
+.filme_info p text { /*cor meu ep*/
+    color: #fff
+}
+
+section {
+    margin-bottom: -100px;
+    position: relative;
+}
+
+section:hover {
+    z-index: 9;
+}
+
+
+
+
+
+
